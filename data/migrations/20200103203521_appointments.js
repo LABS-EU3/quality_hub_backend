@@ -5,17 +5,17 @@ exports.up = function(knex) {
     table.boolean('canceled').defaultTo(false);
     table.boolean('finished').defaultTo(false);
     table
-      .integer('coach_id')
+      .integer('user_id_one')
       .notNullable()
       .unsigned()
       .references('id')
-      .inTable('coaches');
+      .inTable('users');
     table
-      .integer('student_id')
+      .integer('user_id_two')
       .notNullable()
       .unsigned()
       .references('id')
-      .inTable('students');
+      .inTable('users');
     table
       .integer('topic_id')
       .notNullable()

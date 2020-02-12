@@ -4,7 +4,6 @@ const ModelHelper = require('../../utils/modelHelpers');
 exports.feedback = async (req, res) => {
   try {
     const feedback = await Feedback.getFeedback(
-      req.query.role,
       req.params.id,
     );
 
